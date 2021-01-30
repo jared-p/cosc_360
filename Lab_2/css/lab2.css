@@ -1,7 +1,8 @@
 header, footer {
     color:white;
     background-color:#312C32;
-    margin: 0em 4em 0.5em 4em
+    margin: 0em 4em 0.5em 4em;
+    padding: 0.5em;
 }
 h1,h2,h3,nav,footer{
     font-family:"Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
@@ -34,13 +35,14 @@ a:hover{
 [title]{
     border: 0.1em solid;
     border-color: black;
-    border-image-outset: 0.25em;
     padding: 0.25em;
     width:98%;
+    margin-top: 0.5em;
 }
 section>p:last-child{
     background-image: url(../images/gray-gradient.png);
     border-radius: .5em;
+    margin-top:0.4em
 }
 span{
     display: inline-block;
@@ -48,6 +50,34 @@ span{
     font-size: 70%;
     vertical-align:middle;
 }
-.byline{
-
+section{
+    width: 50%;
+    margin: auto;
+    padding: 0 2em 0.3em 2em;
+    background-color: whitesmoke;
 }
+#related_photos, #description{
+    border-bottom: 0.1rem solid;
+    border-color:black;
+    margin-bottom: 0.4rem;
+}
+section>div>p{
+    border-bottom: 0.08rem dashed;
+    margin-bottom: 1.5rem;
+}
+section>div>div.byline{
+    border-top: 0.09rem solid;
+    padding-top: 0.6rem;
+}
+.byline{
+    font-style: italic;
+    font-size: 80%;
+    color:gray;
+}
+#description+.byline{
+    margin-bottom: 0.4rem;
+}
+#description{
+    padding-top: 0.4em;
+}
+
