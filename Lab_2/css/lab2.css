@@ -1,0 +1,53 @@
+header, footer {
+    color:white;
+    background-color:#312C32;
+    margin: 0em 4em 0.5em 4em
+}
+h1,h2,h3,nav,footer{
+    font-family:"Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
+}
+h1{
+    font-size: 1.5em;
+}
+h2{
+    font-size: 0.75em;
+}
+h3, nav{
+    font-size: 1.125em;
+}
+body{
+    font-family: Georgia, Cambria, "Times New Roman", serif ;
+    font-size: 100%;
+    background-color: #98dafc;
+    
+}
+a:link{
+    color: #98dafc;
+    font-weight: bold;
+}
+a:visited{
+    color: #daad86;
+}
+a:hover{
+    background-color: #FFFFCC;
+}
+[title]{
+    border: 0.1em solid;
+    border-color: black;
+    border-image-outset: 0.25em;
+    padding: 0.25em;
+    width:98%;
+}
+section>p:last-child{
+    background-image: url(../images/gray-gradient.png);
+    border-radius: .5em;
+}
+span{
+    display: inline-block;
+    margin:.5em 0em .5em .3em;
+    font-size: 70%;
+    vertical-align:middle;
+}
+.byline{
+
+}
