@@ -1,0 +1,81 @@
+caption {
+    background-color: darkolivegreen;
+    color: grey;
+    padding: 0.75em 0.4em 0.75em 0.4em; 
+}
+tbody>tr>td{
+    padding: 0.75em;
+    color:dimgray;
+}
+thead{
+    color:dimgray;
+    text-align: center;
+}
+tfoot{
+    text-align: center;
+}
+tbody {
+    text-align: center;
+}
+tbody>tr>td:hover{
+    background-color:red;
+}
+tfoot>tr>td{
+    padding: 0.4em;
+}
+a:link{
+    color: rgb(3, 70, 114);
+}
+a:visited{
+    color: rgb(88, 88, 88);
+}
+table{
+    background-color: rgb(235, 235, 235);
+    border: thin;
+    margin: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif ;
+}
+td, th {
+    border: white solid 0.1em;
+}
+#today {
+    background-color: cornflowerblue;
+    color: whitesmoke;
+}
+form {
+    width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgb(3, 70, 114);
+    color:whitesmoke;
+    padding: 0.7em 1em 1em 1em;
+}
+input {
+    margin: 10px;
+}
+legend {
+    background-color:whitesmoke;
+    padding: 0.5em;
+    color:rgb(3, 70, 114);
+}
+body > table:nth-child(1) > caption:nth-child(1) {
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: 0.162em;
+    font-weight: 400;
+    font-style: italic;
+    color:whitesmoke;
+}
+body > form:nth-child(2) > fieldset:nth-child(1) > legend:nth-child(1) {
+    letter-spacing: 0.211em;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 0.9;
+    font-size: 100%;
+  }
+  
