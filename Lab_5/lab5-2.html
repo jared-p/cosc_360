@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>COSC360 Lab3</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/lab3.css">
+    <script type="text/javascript" src="script/lab5-2.js"></script>
+</head>
+
+<body>
+    <table>
+        <caption>February 2021</caption>
+        <thead>
+            <tr>
+                <th>S</th>
+                <th>M</th>
+                <th>T</th>
+                <th>W</th>
+                <th>T</th>
+                <th>F</th>
+                <th>S</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td id="today">6</td>
+            </tr>
+            <tr>
+                <td><a href='#'>7</a></td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td><a href='#'>14</a></td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td><a href='#'>21</a></td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td><a href='#'>28</a></td>
+                <td colspan='6'></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" id='prev'><a href='#'>&#8592;Januray</a></td>
+                <td></td>
+                <td colspan="3" id='next'><a href='#'>March&#8594;</a></td>
+            </tr>
+        </tfoot>
+    </table>
+    <form method="post" action="http://www.randyconnolly.com/tests/process.php">
+        <fieldset>
+            <legend>Meeting Details</legend>
+            <label for="client">Client Name: </label>
+            <input id='client' name='client' type="text" placeholder="Enter name">
+            <br>
+            <label for="first">First Meeting?</label>
+            <input id="first" type="checkbox" name="first">
+            <br>
+            <label for="type">Client Type: </label>
+            <input id="type" type="radio" name="type" value="School">School
+            <input type="radio" name="type" value='College'>College
+            <input type="radio" name="type" value='University'>University
+            <br>
+            <label for="meetdate">Meeting Date: </label>
+            <input id="meetdate" type="date" name="meetdate">
+            <br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </fieldset>
+    </form>
+</body>
+
+</html>
