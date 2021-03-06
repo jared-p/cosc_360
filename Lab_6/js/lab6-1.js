@@ -33,9 +33,7 @@ window.addEventListener("load", function(){
         //console.log($(this.parentNode));    
     });
 
-    $('.col-md-4')
-    
-    .on('mouseleave', function(e){
+    $('.img-responsive').on('mouseleave', function(e){
         $('#preview').remove();
         $('.gray').removeClass("gray");
     });

@@ -11,13 +11,54 @@
   <p id="time_two"></p>
 
   <!-- Add button and table here -->
+  <button id="button">Get City Info</button>
 
   <script>
+  $('#button').on('click', function(e){
+    if( $("#button").attr("class") == null ){
+      var url = "http://www.randyconnolly.com/funwebdev/services/travel/cities.php";
+      var results = $.get(url);
+      results.done(function(data){
+        //console.log(data);
+        var table = $("<table></table>");
+        var thr = $("<tr></tr>");
+        for( var key in data[0]){
+          var th = $("<th>"+key+"</th>");
+          th.css("border", "1px solid");
+          thr.append(th);
+        }
+        table.append(thr);
+        for( var i = 0; i < data.length; i++){
+          var tr = $("<tr></tr>");
+          //console.log(data[i]);
+          for( var key in data[i]){
+            var td = $("<td>"+data[i][key]+"</td>");
+            td.css("border", "1px solid");
+            tr.append(td);
+          }
+          table.append(tr);
+        }
+        table.css({"text-align": "center","border": "1px solid","border-collapse": "collapse", "width": "60%","margin-left": "auto", "margin-right": "auto"});
+        var button = $("#button");
+        button.after(table);
+      });
+      results.fail(function(jqXHR) {
+        console.log("Error: " + jqXHR.status);
+        alert("There was an error retrieving the data\nError Code: " +jqXHR.status);
+    });
+      results.always(function(jqXHR) {
+      console.log("done");
+      if( jqXHR.statusText != "error"){
+      $("#button").attr("class", "filled");
+      }
+    });
+    }
+  });
+
   //set interval timers to trigger the refresh.  Here the callback function will
   //be called when the timer fires
   var var1 = setInterval(timer1, 1000);
   var var2 = setInterval(timer2, 1000);
-
   //this is the callback function that will be run when timer1 runs.  Just pulls local time
   function timer1() {
       var d = new Date();
@@ -34,14 +75,14 @@
   function timer2() {
       var results = $.get("http://time.jsontest.com/");
       results.done(function(data) {
-                            console.log(data);
+                            //console.log(data);
                             //Vanilla JS
                             //document.getElementById("time_two").innerHTML = data.time;
                             //jQuery
                             $("#time_two").html("Remote server time: " + data.time);
                               });
-      results.fail(function(jqXHR) {console.log("Error: " + jqXHR.status);});
-      results.always(function() {console.log("done");});
+      //results.fail(function(jqXHR) {console.log("Error: " + jqXHR.status);});
+      //results.always(function() {console.log("done");});
 
 
   }
